@@ -13,14 +13,14 @@ import ddt
 class TestLogin(unittest.TestCase):
 
     @classmethod
-    def setUpClass(cls) -> None:
+    def setUpClass(cls):
         print("=====测试用例执行之前，setUpClass，整个测试类只执行一次")
         cls.driver = webdriver.Chrome()
         cls.driver.get(CD.web_login_url)
         cls.lg = LoginPage(cls.driver)
 
     @classmethod
-    def tearDownClass(cls) -> None:
+    def tearDownClass(cls):
         print("=====测试用例执行之后，tearDownClass，整个测试类只执行一次")
         cls.driver.quit()
 
