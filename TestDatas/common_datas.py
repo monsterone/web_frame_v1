@@ -10,3 +10,5 @@ web_login_url = "http://120.78.128.25:8765/Index/login.html"
 # # driver.find_elements()
 # driver.find_element().text
 # driver.find_element().click()
+user = '18684720553'
+passwd = 'python'

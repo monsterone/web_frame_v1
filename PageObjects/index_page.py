@@ -6,18 +6,16 @@ from selenium.webdriver.common.by import By
 
 from PageLocators.indexpage_locators import IndexPageLocator as IL
 # from selenium import webdriver
+from Common.basepage import BasePage
+class IndexPage(BasePage):
 
-class IndexPage:
-
-    def __init__(self,driver):
-        # driver = webdriver.chrome()
-        self.driver = driver
 
     #断言
     def isExist_logout_ele(self):
         #如果存在就返回True,如果不存在，就返回False
         try:
-            WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((By.XPATH,'//a[@href="/Index/logout.html"]')))
+            doc = "首页页面_断言登录"
+            self.wait_eleVisible(IL.index_logout,doc=doc)
             return True
         except:
             return False
