@@ -41,7 +41,7 @@ class BasePage:
             logger.exception("等待元素可见失败！！！")
             # 截图 - 保存到的指定的目录。名字要想好怎么取？
             self.save_screenshot(doc)
-        raise
+            raise
 
 
     #等待元素存在
@@ -57,7 +57,7 @@ class BasePage:
             logger.exception("查找元素失败!!!")
             #截图
             self.save_screenshot(doc)
-        raise
+            raise
 
     #点击操作
     def click_element(self,locator,doc=""):
@@ -71,7 +71,7 @@ class BasePage:
             logger.exception("元素点击失败!!!")
             #截图
             self.save_screenshot(doc)
-        raise
+            raise
 
     #输入操作
     def input_text(self,locator,text,doc=""):
@@ -85,7 +85,7 @@ class BasePage:
             logger.exception("元素输入失败!!!")
             # 截图
             self.save_screenshot(doc)
-        raise
+            raise
 
 
     #获取元素的文本内容
@@ -100,7 +100,7 @@ class BasePage:
             logger.exception("获取元素的文本内容失败!!!")
             # 截图
             self.save_screenshot(doc)
-        raise
+            raise
 
         #获取元素的属性
     def get_element_attribute(self,locator,attr,doc=""):
@@ -114,7 +114,7 @@ class BasePage:
             logger.exception("获取元素的属性失败!!!")
             # 截图
             self.save_screenshot(doc)
-        raise
+            raise
 
     #alert处理
     def alert_action(self,action="accept"):
@@ -141,7 +141,7 @@ class BasePage:
             logger.info("截取网页成功，图片路径为{}".format(filePath))
         except:
             logger.exception("截图失败！！！")
-        raise
+            raise
 
 
 

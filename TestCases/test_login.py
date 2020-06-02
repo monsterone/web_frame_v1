@@ -16,6 +16,7 @@ class TestLogin(unittest.TestCase):
     def setUpClass(cls):
         print("=====测试用例执行之前，setUpClass，整个测试类只执行一次")
         cls.driver = webdriver.Chrome()
+        cls.driver.maximize_window()
         cls.driver.get(CD.web_login_url)
         cls.lg = LoginPage(cls.driver)
 
@@ -36,12 +37,12 @@ class TestLogin(unittest.TestCase):
         # self.driver.quit()
         self.driver.refresh()
 
-    #正常用例 - 登录成功
-    def test_login_1_success(self):
-        #步骤 输入用户名：XX 密码：XX 点击登录
-        self.lg.login(LD.success_data["user"],LD.success_data["passwd"])
-        #断言 首页当中 - 能否找到 退出 这个元素
-        self.assertTrue(IndexPage(self.driver).isExist_logout_ele())
+    # #正常用例 - 登录成功
+    # def test_login_1_success(self):
+    #     #步骤 输入用户名：XX 密码：XX 点击登录
+    #     self.lg.login(LD.success_data["user"],LD.success_data["passwd"])
+    #     #断言 首页当中 - 能否找到 退出 这个元素
+    #     self.assertTrue(IndexPage(self.driver).isExist_logout_ele())
 
 
     #异常用例 - 手机号格式不正确(大于11位，小于11位，不在号码段，用户名或密码为空) ddt

@@ -1,6 +1,7 @@
 import logging
 import os.path
 import time
+from Common.dir_config import log_dir
 
 class Logger(object):
 
@@ -15,10 +16,9 @@ class Logger(object):
         self.logger.setLevel(logging.DEBUG)
 
         #创建一个handler,用于写入日志文件
-        rq = time.strftime("%Y-%m-%d %H%M%S",time.localtime(time.time()))
-        log_path = os.path.dirname(os.path.dirname(__file__))+'/logs/' # 项目根目录下/Logs 保存日志
-        # log_path = os.path.dirname(os.path.abspath('.')) + '/logs/'
-        log_name = log_path+rq+'.log'
+        rq = time.strftime("%Y-%m-%d-%H_%M_%S",time.localtime(time.time()))
+        # log_path = os.path.dirname(os.path.dirname(__file__))+'/logs/' # 项目根目录下/Logs 保存日志
+        log_name = log_dir+"/"+rq+'.log'
         fh = logging.FileHandler(log_name)
         fh.setLevel(logging.INFO)
 

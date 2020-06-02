@@ -17,7 +17,7 @@ testcase_dir = os.path.join(BASE_DIR,"TestCases")
 htmlreport_dir = os.path.join(BASE_DIR,"Outputs","reports")
 
 #日志输出路径
-htmlreport_dir = os.path.join(BASE_DIR,"Outputs","logs")
+log_dir = os.path.join(BASE_DIR,"Outputs","logs")
 
 #截图输出路径
 screenshot_dir = os.path.join(BASE_DIR,"Outputs","screenshots")
@@ -28,8 +28,8 @@ screenshot_dir = os.path.join(BASE_DIR,"Outputs","screenshots")
 
 
 
-#测试报告路径
-test_report_path = os.path.join(BASE_DIR,'test_result','html_report','result.html')
-
-#配置文件的路径
-case_config_path = os.path.join(BASE_DIR,'conf','case.config')
+# #测试报告路径
+# test_report_path = os.path.join(BASE_DIR,'test_result','html_report','result.html')
+#
+# #配置文件的路径
+# case_config_path = os.path.join(BASE_DIR,'conf','case.config')

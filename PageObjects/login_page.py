@@ -17,7 +17,7 @@ class LoginPage(BasePage):
         self.input_text(loc.pwd_text,passwd,doc)
         #判断rember_user 的值，来决定，是否勾选
         self.click_element(loc.login_but,doc)
-        self.driver.find_element(*loc.login_but).click()
+        # self.driver.find_element(*loc.login_but).click()
 
 
 
