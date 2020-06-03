@@ -6,7 +6,7 @@ from PageObjects.index_page import IndexPage
 from TestDatas import common_datas as CD
 from TestDatas import login_datas as LD
 import ddt
-
+import pytest
 
 # 测试用例=测试数据+页面方法调用
 @ddt.ddt
@@ -38,6 +38,7 @@ class TestLogin(unittest.TestCase):
         self.driver.refresh()
 
     #正常用例 - 登录成功
+    @pytest.mark.smoke
     def test_login_1_success(self):
         #步骤 输入用户名：XX 密码：XX 点击登录
         self.lg.login(LD.success_data["user"],LD.success_data["passwd"])

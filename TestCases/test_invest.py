@@ -41,6 +41,8 @@
 
 
 import unittest
+
+import pytest
 from selenium import webdriver
 from PageObjects.index_page import IndexPage
 from PageObjects.bid_page import BidPage
@@ -125,7 +127,7 @@ class TestInvest(unittest.TestCase):
 
 
     #正常投资-成功
-
+    @pytest.mark.smoke
     def test_invest_2_success(self):
         logger.info("******投资用例：正常场景-投资成功 ******")
         # 标页面 - 获取投资前的个人余额
