@@ -1,8 +1,12 @@
 import pytest
 from selenium import webdriver
+
+from PageObjects.bid_page import BidPage
+from PageObjects.index_page import IndexPage
 from PageObjects.login_page import LoginPage
 from TestDatas import common_datas as CD
-
+from Common.logger import Logger
+import time
 ##contftest 执行过程
 #1.conftest.py
 #2.定义fixture @pytest.fixture
@@ -19,7 +23,10 @@ from TestDatas import common_datas as CD
 #python_hm\web_frame_v1>pytest -m demo --reruns 2 --reruns-delay 5 -s --junitxml=Outputs/re
 # ports/report.xml --html=Outputs/reports/html_report.html
 
+#pytest -m invest --reruns 2 --reruns-delay 5 -s --junitxml=Outputs/
+# reports/report_invest.xml --html=Outputs/reports/html_report_invest.html
 
+logger = Logger(__name__).getlog()
 driver = None
 #声明它是一个fixture
 @pytest.fixture(scope="class")
@@ -42,10 +49,37 @@ def refresh_page():
     #前置操作
     yield
     #后置操作
+    logger.info("======每一个用例后置：刷新当前页面======")
     driver.refresh()
+    time.sleep(0.5)
+
+# =====test_invest======
+@pytest.fixture(scope="class")
+def access_invest():
+    global driver
+    # 初始化浏览器会话
+    logger.info("======用例类前置：初始化浏览器会话，登录XXX系统======")
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+    driver.get(CD.web_login_url)
+    LoginPage(driver).login(CD.user, CD.passwd)
+    # 首页-选一个标来投资，直接选第一个标/随机选一个标
+    IndexPage(driver).click_bid_by_random()
+    ## 投标页面
+    bid_page = BidPage(driver)
+    yield (driver,bid_page)
+    logger.info("======用例类后置：关闭浏览器会话，清理环境======")
+    driver.quit()
 
 
 
+
+
+
+
+
+
+# ==========test_demo=======
 @pytest.fixture("session")
 def session_demo():
     print("=====测试前---session_demo====")

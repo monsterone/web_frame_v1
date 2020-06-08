@@ -57,34 +57,36 @@ import time
 logger = Logger(__name__).getlog()
 
 
-@ddt.ddt
-class TestInvest(unittest.TestCase):
-    logger = Logger(__name__).getlog()
-    @classmethod
-    def setUpClass(cls):
-        # 初始化浏览器会话
-        logger.info("======用例类前置：初始化浏览器会话，登录XXX系统======")
-        cls.driver = webdriver.Chrome()
-        cls.driver.maximize_window()
-        cls.driver.get(CD.web_login_url)
-        LoginPage(cls.driver).login(CD.user, CD.passwd)
-        #首页-选一个标来投资，直接选第一个标/随机选一个标
-        IndexPage(cls.driver).click_bid_by_random()
-        ## 投标页面
-        cls.bid_page = BidPage(cls.driver)
-
-    @classmethod
-    def tearDownClass(cls):
-        logger.info("======用例类后置：关闭浏览器会话，清理环境======")
-        cls.driver.quit()
-
-    def setUp(self):
-       pass
-
-    def tearDown(self):
-        logger.info("======每一个用例后置：刷新当前页面======")
-        self.driver.refresh()
-        time.sleep(0.5)
+@pytest.mark.usefixtures("access_invest")
+@pytest.mark.usefixtures("refresh_page")
+@pytest.mark.invest
+class TestInvest():
+    # logger = Logger(__name__).getlog()
+    # @classmethod
+    # def setUpClass(cls):
+    #     # 初始化浏览器会话
+    #     logger.info("======用例类前置：初始化浏览器会话，登录XXX系统======")
+    #     cls.driver = webdriver.Chrome()
+    #     cls.driver.maximize_window()
+    #     cls.driver.get(CD.web_login_url)
+    #     LoginPage(cls.driver).login(CD.user, CD.passwd)
+    #     #首页-选一个标来投资，直接选第一个标/随机选一个标
+    #     IndexPage(cls.driver).click_bid_by_random()
+    #     ## 投标页面
+    #     cls.bid_page = BidPage(cls.driver)
+    #
+    # @classmethod
+    # def tearDownClass(cls):
+    #     logger.info("======用例类后置：关闭浏览器会话，清理环境======")
+    #     cls.driver.quit()
+    #
+    # def setUp(self):
+    #    pass
+    #
+    # def tearDown(self):
+    #     logger.info("======每一个用例后置：刷新当前页面======")
+    #     self.driver.refresh()
+    #     time.sleep(0.5)
 
     # #进入投标页面函数
     # def into_inverst(self):
@@ -127,39 +129,24 @@ class TestInvest(unittest.TestCase):
 
 
     #正常投资-成功
-    @pytest.mark.smoke
-    def test_invest_2_success(self):
-        logger.info("******投资用例：正常场景-投资成功 ******")
-        # 标页面 - 获取投资前的个人余额
-        userMoney_beforeInvest = self.bid_page.get_uer_money()
-        # 标页面 - 输入投标金额，点击投标按钮
-        self.bid_page.invest(IDs.inverst_success["money"])
-        # 标页面 - 投资成功的弹出框,点击查看并激活
-        self.bid_page.click_activeButton_on_success_popup()
-        ## 断言
-        # 个人页面 - 获取用户当前余额
-        userMoney_afterInvest =  UserPage(self.driver).get_avabile_mount()
-        # 余额，投资前后对比
-        # self.assertEqual(userMoney_beforeInvest - userMoney_afterInvest, IDs.inverst_success["check"])
-        # 在数据没有在page页面float处理的情况，可以参考下面的断言，更简洁
-        # assert IDs.inverst_success["check"] == int(float(userMoney_beforeInvest)-float(userMoney_afterInvest))
-        assert IDs.inverst_success["check"] == (userMoney_beforeInvest-userMoney_afterInvest)
+
 
     # 异常用例 - 弹框提示
-    @ddt.data(*IDs.inverst_fail_alert)
-    def test_invest_0_failed_nol00(self,data):
+    # @ddt.data(*IDs.inverst_fail_alert)
+    @pytest.mark.parametrize("data",IDs.inverst_fail_alert)
+    def test_invest_0_failed_nol00(self,data,access_invest):
         logger.info("******投资用例：异常场景-投标金额不是 100的整数倍、错误格式 ******")
 
         # 标页面 - 获取投资前的个人余额
-        userMoney_beforeInvest = self.bid_page.get_uer_money()
+        userMoney_beforeInvest = access_invest[1].get_uer_money()
         # 标页面 - 输入投标金额，点击投标按钮
-        self.bid_page.invest(data["money"])
+        access_invest[1].invest(data["money"])
         # 获取提示信息
-        errorMsg = self.bid_page.get_errorMsg_from_pageCenter()
+        errorMsg = access_invest[1].get_errorMsg_from_pageCenter()
         # 刷新
-        self.driver.refresh()
+        access_invest[0].refresh()
         # 标页面 - 获取用户余额（输入框）
-        userMoney_afterInvest = self.bid_page.get_uer_money()
+        userMoney_afterInvest = access_invest[1].get_uer_money()
 
         #断言
         assert errorMsg == data["check"]
@@ -167,24 +154,43 @@ class TestInvest(unittest.TestCase):
 
 
     # 异常用例 - 按钮提示
-    @ddt.data(*IDs.inverst_fail_button)
-    def test_invest_1_failed_noButton(self, data):
+    # @ddt.data(*IDs.inverst_fail_button)
+    @pytest.mark.parametrize("data",IDs.inverst_fail_button)
+    def test_invest_1_failed_noButton(self, data,access_invest):
         logger.info("******投资用例：异常场景-投标金额不是10的整数倍-按钮可不点击 ******")
 
         # 标页面 - 获取投资前的个人余额
-        userMoney_beforeInvest = self.bid_page.get_uer_money()
+        userMoney_beforeInvest = access_invest[1].get_uer_money()
         # 标页面 - 输入投标金额不是 10的整数倍，按钮可不点击
-        self.bid_page.invest_no_click(data["money"])
+        access_invest[1].invest_no_click(data["money"])
         # 获取提示信息
-        errorMsg = self.bid_page.get_errorMsg_from_investButton()
+        errorMsg = access_invest[1].get_errorMsg_from_investButton()
         # 刷新
-        self.driver.refresh()
+        access_invest[0].refresh()
         # 标页面 - 获取用户余额（输入框）
-        userMoney_afterInvest = self.bid_page.get_uer_money()
+        userMoney_afterInvest = access_invest[1].get_uer_money()
 
         # 断言
         assert errorMsg == data["check"]
         assert userMoney_afterInvest == userMoney_beforeInvest
+
+    @pytest.mark.smoke
+    def test_invest_2_success(self, access_invest):
+        logger.info("******投资用例：正常场景-投资成功 ******")
+        # 标页面 - 获取投资前的个人余额
+        userMoney_beforeInvest = access_invest[1].get_uer_money()
+        # 标页面 - 输入投标金额，点击投标按钮
+        access_invest[1].invest(IDs.inverst_success["money"])
+        # 标页面 - 投资成功的弹出框,点击查看并激活
+        access_invest[1].click_activeButton_on_success_popup()
+        ## 断言
+        # 个人页面 - 获取用户当前余额
+        userMoney_afterInvest = UserPage(access_invest[0]).get_avabile_mount()
+        # 余额，投资前后对比
+        # self.assertEqual(userMoney_beforeInvest - userMoney_afterInvest, IDs.inverst_success["check"])
+        # 在数据没有在page页面float处理的情况，可以参考下面的断言，更简洁
+        # assert IDs.inverst_success["check"] == int(float(userMoney_beforeInvest)-float(userMoney_afterInvest))
+        assert IDs.inverst_success["check"] == (userMoney_beforeInvest - userMoney_afterInvest)
 
 
 

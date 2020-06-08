@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="DESKTOP-7K6BCD4" name="pytest" skipped="0" tests="5" time="615.799" timestamp="2020-06-06T00:16:07.628857"><testcase classname="TestCases.test_invest.TestInvest" file="TestCases\test_invest.py" line="135" name="test_invest_0_failed_nol00[data0]" time="160.481"></testcase><testcase classname="TestCases.test_invest.TestInvest" file="TestCases\test_invest.py" line="135" name="test_invest_0_failed_nol00[data1]" time="49.950"></testcase><testcase classname="TestCases.test_invest.TestInvest" file="TestCases\test_invest.py" line="157" name="test_invest_1_failed_noButton[data0]" time="49.433"></testcase><testcase classname="TestCases.test_invest.TestInvest" file="TestCases\test_invest.py" line="157" name="test_invest_1_failed_noButton[data1]" time="49.594"></testcase><testcase classname="TestCases.test_invest.TestInvest" file="TestCases\test_invest.py" line="176" name="test_invest_2_success" time="235.811"><failure message="selenium.common.exceptions.TimeoutException: Message:">self = &lt;TestCases.test_invest.TestInvest object at 0x000001AA91052940&gt;
+access_invest = (&lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;ce87aba900fa5e2b4d45cbbc08d9664d&quot;)&gt;, &lt;PageObjects.bid_page.BidPage object at 0x000001AA910682B0&gt;)
+
+    @pytest.mark.smoke
+    def test_invest_2_success(self, access_invest):
+        logger.info(&quot;******投资用例：正常场景-投资成功 ******&quot;)
+        # 标页面 - 获取投资前的个人余额
+        userMoney_beforeInvest = access_invest[1].get_uer_money()
+        # 标页面 - 输入投标金额，点击投标按钮
+        access_invest[1].invest(IDs.inverst_success[&quot;money&quot;])
+        # 标页面 - 投资成功的弹出框,点击查看并激活
+&gt;       access_invest[1].click_activeButton_on_success_popup()
+
+TestCases\test_invest.py:185: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+PageObjects\bid_page.py:43: in click_activeButton_on_success_popup
+    self.wait_eleVisible(BL.click_activeButton,doc=doc)
+Common\basepage.py:33: in wait_eleVisible
+    EC.visibility_of_element_located(locator))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session=&quot;ce87aba900fa5e2b4d45cbbc08d9664d&quot;)&gt;
+method = &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x000001AA91041390&gt;
+message = &apos;&apos;
+
+    def until(self, method, message=&apos;&apos;):
+        &quot;&quot;&quot;Calls the method provided with the driver as an argument until the \
+        return value is not False.&quot;&quot;&quot;
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, &apos;screen&apos;, None)
+                stacktrace = getattr(exc, &apos;stacktrace&apos;, None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+venv\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</failure></testcase></testsuite></testsuites>
