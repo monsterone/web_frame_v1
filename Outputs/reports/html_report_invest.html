@@ -243,7 +243,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>html_report_invest.html</h1>
-    <p>Report generated on 06-Jun-2020 at 00:26:23 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 09-Jun-2020 at 00:36:32 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -257,13 +257,13 @@ function filter_table(elem) {
         <td>Windows-10-10.0.18362-SP0</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"html": "2.1.1", "metadata": "1.9.0", "rerunfailures": "9.0"}</td></tr>
+        <td>{"allure-pytest": "2.8.16", "html": "2.1.1", "metadata": "1.9.0", "rerunfailures": "9.0"}</td></tr>
       <tr>
         <td>Python</td>
         <td>3.6.5</td></tr></table>
     <h2>Summary</h2>
-    <p>5 tests ran in 615.81 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">4 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">3 rerun</span>
+    <p>1 tests ran in 10.34 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">2 rerun</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -277,315 +277,27 @@ function filter_table(elem) {
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
-          <td class="col-name">TestCases/test_invest.py::TestInvest::test_invest_2_success</td>
-          <td class="col-duration">31.06</td>
+          <td class="col-name">TestCases/test_login.py::test_demo</td>
+          <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;TestCases.test_invest.TestInvest object at 0x000001AA91052940&gt;<br/>access_invest = (&lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;ce87aba900fa5e2b4d45cbbc08d9664d&quot;)&gt;, &lt;PageObjects.bid_page.BidPage object at 0x000001AA910682B0&gt;)<br/><br/>    @pytest.mark.smoke<br/>    def test_invest_2_success(self, access_invest):<br/>        logger.info(&quot;******投资用例：正常场景-投资成功 ******&quot;)<br/>        # 标页面 - 获取投资前的个人余额<br/>        userMoney_beforeInvest = access_invest[1].get_uer_money()<br/>        # 标页面 - 输入投标金额，点击投标按钮<br/>        access_invest[1].invest(IDs.inverst_success[&quot;money&quot;])<br/>        # 标页面 - 投资成功的弹出框,点击查看并激活<br/>&gt;       access_invest[1].click_activeButton_on_success_popup()<br/><br/>TestCases\test_invest.py:185: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>PageObjects\bid_page.py:43: in click_activeButton_on_success_popup<br/>    self.wait_eleVisible(BL.click_activeButton,doc=doc)<br/>Common\basepage.py:33: in wait_eleVisible<br/>    EC.visibility_of_element_located(locator))<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.support.wait.WebDriverWait (session=&quot;ce87aba900fa5e2b4d45cbbc08d9664d&quot;)&gt;<br/>method = &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x000001AA91041390&gt;<br/>message = &#x27;&#x27;<br/><br/>    def until(self, method, message=&#x27;&#x27;):<br/>        &quot;&quot;&quot;Calls the method provided with the driver as an argument until the \<br/>        return value is not False.&quot;&quot;&quot;<br/>        screen = None<br/>        stacktrace = None<br/>    <br/>        end_time = time.time() + self._timeout<br/>        while True:<br/>            try:<br/>                value = method(self._driver)<br/>                if value:<br/>                    return value<br/>            except self._ignored_exceptions as exc:<br/>                screen = getattr(exc, &#x27;screen&#x27;, None)<br/>                stacktrace = getattr(exc, &#x27;stacktrace&#x27;, None)<br/>            time.sleep(self._poll)<br/>            if time.time() &gt; end_time:<br/>                break<br/>&gt;       raise TimeoutException(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.TimeoutException: Message:</span><br/><br/>venv\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException<br/> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m TestCases.test_invest:test_invest.py:179 ******投资用例：正常场景-投资成功 ******
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:21:22.662307，等待结束时间：2020-06-06 00:21:22.706188等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_投资操作:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:21:22.734114，等待结束时间：2020-06-06 00:21:22.758051等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 投资页面_投资操作 元素输入：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 投资页面_投资操作 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[text()=&quot;投标成功！&quot;]//following-sibling::div[@class=&quot;capital_btn&quot;]//button[text()=&quot;查看并激活&quot;]&#x27;)可见
-[31m[1mERROR   [0m Common.basepage:basepage.py:41 等待元素可见失败！！！
-Traceback (most recent call last):
-  File &quot;D:\ZPython\python_hm\web_frame_v1\Common\basepage.py&quot;, line 33, in wait_eleVisible
-    EC.visibility_of_element_located(locator))
-  File &quot;d:\zpython\python_hm\web_frame_v1\venv\lib\site-packages\selenium\webdriver\support\wait.py&quot;, line 80, in until
-    raise TimeoutException(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: 
-
-[32mINFO    [0m Common.basepage:basepage.py:141 截取网页成功，图片路径为D:\ZPython\python_hm\web_frame_v1\Outputs\screenshots/投资页面_投资成功的提示框_2020-06-06-00-21-53.png<br/> -----------------------------Captured log teardown------------------------------ <br/>[32mINFO    [0m TestCases.conftest:conftest.py:49 ======每一个用例后置：刷新当前页面======
-[32mINFO    [0m TestCases.conftest:conftest.py:68 ======用例类后置：关闭浏览器会话，清理环境======<br/> -------------------------------Captured log setup------------------------------- <br/>[32mINFO    [0m TestCases.conftest:conftest.py:58 ======用例类前置：初始化浏览器会话，登录XXX系统======
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 登录页面_登录功能:元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)已可见，等待起始时间：2020-06-06 00:22:38.932442，等待结束时间：2020-06-06 00:22:39.098998等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 登录页面_登录功能 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)<br/> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m TestCases.test_invest:test_invest.py:179 ******投资用例：正常场景-投资成功 ******
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:23:26.974974，等待结束时间：2020-06-06 00:23:27.023845等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_投资操作:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:23:27.051768，等待结束时间：2020-06-06 00:23:27.077701等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 投资页面_投资操作 元素输入：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 投资页面_投资操作 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[text()=&quot;投标成功！&quot;]//following-sibling::div[@class=&quot;capital_btn&quot;]//button[text()=&quot;查看并激活&quot;]&#x27;)可见
-[31m[1mERROR   [0m Common.basepage:basepage.py:41 等待元素可见失败！！！
-Traceback (most recent call last):
-  File &quot;D:\ZPython\python_hm\web_frame_v1\Common\basepage.py&quot;, line 33, in wait_eleVisible
-    EC.visibility_of_element_located(locator))
-  File &quot;d:\zpython\python_hm\web_frame_v1\venv\lib\site-packages\selenium\webdriver\support\wait.py&quot;, line 80, in until
-    raise TimeoutException(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: 
-
-[32mINFO    [0m Common.basepage:basepage.py:141 截取网页成功，图片路径为D:\ZPython\python_hm\web_frame_v1\Outputs\screenshots/投资页面_投资成功的提示框_2020-06-06-00-23-57.png<br/> -----------------------------Captured log teardown------------------------------ <br/>[32mINFO    [0m TestCases.conftest:conftest.py:49 ======每一个用例后置：刷新当前页面======
-[32mINFO    [0m TestCases.conftest:conftest.py:68 ======用例类后置：关闭浏览器会话，清理环境======<br/> -------------------------------Captured log setup------------------------------- <br/>[32mINFO    [0m TestCases.conftest:conftest.py:58 ======用例类前置：初始化浏览器会话，登录XXX系统======
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 登录页面_登录功能:元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)已可见，等待起始时间：2020-06-06 00:24:37.435583，等待结束时间：2020-06-06 00:24:37.508388等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 登录页面_登录功能 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)<br/> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m TestCases.test_invest:test_invest.py:179 ******投资用例：正常场景-投资成功 ******
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:25:24.760034，等待结束时间：2020-06-06 00:25:24.802940等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_投资操作:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:25:24.828851，等待结束时间：2020-06-06 00:25:24.854820等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 投资页面_投资操作 元素输入：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 投资页面_投资操作 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[text()=&quot;投标成功！&quot;]//following-sibling::div[@class=&quot;capital_btn&quot;]//button[text()=&quot;查看并激活&quot;]&#x27;)可见
-[31m[1mERROR   [0m Common.basepage:basepage.py:41 等待元素可见失败！！！
-Traceback (most recent call last):
-  File &quot;D:\ZPython\python_hm\web_frame_v1\Common\basepage.py&quot;, line 33, in wait_eleVisible
-    EC.visibility_of_element_located(locator))
-  File &quot;d:\zpython\python_hm\web_frame_v1\venv\lib\site-packages\selenium\webdriver\support\wait.py&quot;, line 80, in until
-    raise TimeoutException(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: 
-
-[32mINFO    [0m Common.basepage:basepage.py:141 截取网页成功，图片路径为D:\ZPython\python_hm\web_frame_v1\Outputs\screenshots/投资页面_投资成功的提示框_2020-06-06-00-25-55.png<br/></div></td></tr></tbody>
+            <div class="log">@pytest.mark.usefixtures(&quot;class_demo&quot;)<br/>    @pytest.mark.usefixtures(&quot;function_demo&quot;)<br/>    @pytest.mark.demo<br/>    def test_demo():<br/>        print(&quot;HHHHHHHHHHHHHHHHHHHHHH&quot;)<br/>&gt;       assert False<br/><span class="error">E       assert False</span><br/><br/>TestCases\test_login.py:16: AssertionError<br/></div></td></tr></tbody>
       <tbody class="rerun results-table-row">
         <tr>
           <td class="col-result">Rerun</td>
-          <td class="col-name">TestCases/test_invest.py::TestInvest::test_invest_0_failed_nol00[data0]::setup</td>
-          <td class="col-duration">49.94</td>
+          <td class="col-name">TestCases/test_login.py::test_demo</td>
+          <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">@pytest.fixture(scope=&quot;class&quot;)<br/>    def access_invest():<br/>        global driver<br/>        # 初始化浏览器会话<br/>        logger.info(&quot;======用例类前置：初始化浏览器会话，登录XXX系统======&quot;)<br/>        driver = webdriver.Chrome()<br/>        driver.maximize_window()<br/>        driver.get(CD.web_login_url)<br/>        LoginPage(driver).login(CD.user, CD.passwd)<br/>        # 首页-选一个标来投资，直接选第一个标/随机选一个标<br/>&gt;       IndexPage(driver).click_bid_by_random()<br/><br/>TestCases\conftest.py:64: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>PageObjects\index_page.py:30: in click_bid_by_random<br/>    WebDriverWait(self.driver,10).until(EC.visibility_of_any_elements_located(IL.invest_button))<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.support.wait.WebDriverWait (session=&quot;13f622d83380c1df6fd1c6ce1ed8913e&quot;)&gt;<br/>method = &lt;selenium.webdriver.support.expected_conditions.visibility_of_any_elements_located object at 0x000001AA90F72B38&gt;<br/>message = &#x27;&#x27;<br/><br/>    def until(self, method, message=&#x27;&#x27;):<br/>        &quot;&quot;&quot;Calls the method provided with the driver as an argument until the \<br/>        return value is not False.&quot;&quot;&quot;<br/>        screen = None<br/>        stacktrace = None<br/>    <br/>        end_time = time.time() + self._timeout<br/>        while True:<br/>            try:<br/>                value = method(self._driver)<br/>                if value:<br/>                    return value<br/>            except self._ignored_exceptions as exc:<br/>                screen = getattr(exc, &#x27;screen&#x27;, None)<br/>                stacktrace = getattr(exc, &#x27;stacktrace&#x27;, None)<br/>            time.sleep(self._poll)<br/>            if time.time() &gt; end_time:<br/>                break<br/>&gt;       raise TimeoutException(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.TimeoutException: Message:</span><br/><br/>venv\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException<br/> -------------------------------Captured log setup------------------------------- <br/>[32mINFO    [0m TestCases.conftest:conftest.py:58 ======用例类前置：初始化浏览器会话，登录XXX系统======
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 登录页面_登录功能:元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)已可见，等待起始时间：2020-06-06 00:16:31.474959，等待结束时间：2020-06-06 00:16:32.309727等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 登录页面_登录功能 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)<br/></div></td></tr></tbody>
+            <div class="log">@pytest.mark.usefixtures(&quot;class_demo&quot;)<br/>    @pytest.mark.usefixtures(&quot;function_demo&quot;)<br/>    @pytest.mark.demo<br/>    def test_demo():<br/>        print(&quot;HHHHHHHHHHHHHHHHHHHHHH&quot;)<br/>&gt;       assert False<br/><span class="error">E       assert False</span><br/><br/>TestCases\test_login.py:16: AssertionError<br/></div></td></tr></tbody>
       <tbody class="rerun results-table-row">
         <tr>
           <td class="col-result">Rerun</td>
-          <td class="col-name">TestCases/test_invest.py::TestInvest::test_invest_2_success</td>
-          <td class="col-duration">31.15</td>
+          <td class="col-name">TestCases/test_login.py::test_demo</td>
+          <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;TestCases.test_invest.TestInvest object at 0x000001AA90F72C88&gt;<br/>access_invest = (&lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;f96eff9fbaef877bd16b3d0b38f21d68&quot;)&gt;, &lt;PageObjects.bid_page.BidPage object at 0x000001AA90F94A20&gt;)<br/><br/>    @pytest.mark.smoke<br/>    def test_invest_2_success(self, access_invest):<br/>        logger.info(&quot;******投资用例：正常场景-投资成功 ******&quot;)<br/>        # 标页面 - 获取投资前的个人余额<br/>        userMoney_beforeInvest = access_invest[1].get_uer_money()<br/>        # 标页面 - 输入投标金额，点击投标按钮<br/>        access_invest[1].invest(IDs.inverst_success[&quot;money&quot;])<br/>        # 标页面 - 投资成功的弹出框,点击查看并激活<br/>&gt;       access_invest[1].click_activeButton_on_success_popup()<br/><br/>TestCases\test_invest.py:185: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>PageObjects\bid_page.py:43: in click_activeButton_on_success_popup<br/>    self.wait_eleVisible(BL.click_activeButton,doc=doc)<br/>Common\basepage.py:33: in wait_eleVisible<br/>    EC.visibility_of_element_located(locator))<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.support.wait.WebDriverWait (session=&quot;f96eff9fbaef877bd16b3d0b38f21d68&quot;)&gt;<br/>method = &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x000001AA90FDC400&gt;<br/>message = &#x27;&#x27;<br/><br/>    def until(self, method, message=&#x27;&#x27;):<br/>        &quot;&quot;&quot;Calls the method provided with the driver as an argument until the \<br/>        return value is not False.&quot;&quot;&quot;<br/>        screen = None<br/>        stacktrace = None<br/>    <br/>        end_time = time.time() + self._timeout<br/>        while True:<br/>            try:<br/>                value = method(self._driver)<br/>                if value:<br/>                    return value<br/>            except self._ignored_exceptions as exc:<br/>                screen = getattr(exc, &#x27;screen&#x27;, None)<br/>                stacktrace = getattr(exc, &#x27;stacktrace&#x27;, None)<br/>            time.sleep(self._poll)<br/>            if time.time() &gt; end_time:<br/>                break<br/>&gt;       raise TimeoutException(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.TimeoutException: Message:</span><br/><br/>venv\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException<br/> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m TestCases.test_invest:test_invest.py:179 ******投资用例：正常场景-投资成功 ******
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:21:22.662307，等待结束时间：2020-06-06 00:21:22.706188等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_投资操作:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:21:22.734114，等待结束时间：2020-06-06 00:21:22.758051等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 投资页面_投资操作 元素输入：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 投资页面_投资操作 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[text()=&quot;投标成功！&quot;]//following-sibling::div[@class=&quot;capital_btn&quot;]//button[text()=&quot;查看并激活&quot;]&#x27;)可见
-[31m[1mERROR   [0m Common.basepage:basepage.py:41 等待元素可见失败！！！
-Traceback (most recent call last):
-  File &quot;D:\ZPython\python_hm\web_frame_v1\Common\basepage.py&quot;, line 33, in wait_eleVisible
-    EC.visibility_of_element_located(locator))
-  File &quot;d:\zpython\python_hm\web_frame_v1\venv\lib\site-packages\selenium\webdriver\support\wait.py&quot;, line 80, in until
-    raise TimeoutException(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: 
-
-[32mINFO    [0m Common.basepage:basepage.py:141 截取网页成功，图片路径为D:\ZPython\python_hm\web_frame_v1\Outputs\screenshots/投资页面_投资成功的提示框_2020-06-06-00-21-53.png<br/></div></td></tr></tbody>
-      <tbody class="rerun results-table-row">
-        <tr>
-          <td class="col-result">Rerun</td>
-          <td class="col-name">TestCases/test_invest.py::TestInvest::test_invest_2_success</td>
-          <td class="col-duration">31.07</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;TestCases.test_invest.TestInvest object at 0x000001AA910392B0&gt;<br/>access_invest = (&lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;e19a690be003330138915da1903e0500&quot;)&gt;, &lt;PageObjects.bid_page.BidPage object at 0x000001AA90FC21D0&gt;)<br/><br/>    @pytest.mark.smoke<br/>    def test_invest_2_success(self, access_invest):<br/>        logger.info(&quot;******投资用例：正常场景-投资成功 ******&quot;)<br/>        # 标页面 - 获取投资前的个人余额<br/>        userMoney_beforeInvest = access_invest[1].get_uer_money()<br/>        # 标页面 - 输入投标金额，点击投标按钮<br/>        access_invest[1].invest(IDs.inverst_success[&quot;money&quot;])<br/>        # 标页面 - 投资成功的弹出框,点击查看并激活<br/>&gt;       access_invest[1].click_activeButton_on_success_popup()<br/><br/>TestCases\test_invest.py:185: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>PageObjects\bid_page.py:43: in click_activeButton_on_success_popup<br/>    self.wait_eleVisible(BL.click_activeButton,doc=doc)<br/>Common\basepage.py:33: in wait_eleVisible<br/>    EC.visibility_of_element_located(locator))<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.support.wait.WebDriverWait (session=&quot;e19a690be003330138915da1903e0500&quot;)&gt;<br/>method = &lt;selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x000001AA91039FD0&gt;<br/>message = &#x27;&#x27;<br/><br/>    def until(self, method, message=&#x27;&#x27;):<br/>        &quot;&quot;&quot;Calls the method provided with the driver as an argument until the \<br/>        return value is not False.&quot;&quot;&quot;<br/>        screen = None<br/>        stacktrace = None<br/>    <br/>        end_time = time.time() + self._timeout<br/>        while True:<br/>            try:<br/>                value = method(self._driver)<br/>                if value:<br/>                    return value<br/>            except self._ignored_exceptions as exc:<br/>                screen = getattr(exc, &#x27;screen&#x27;, None)<br/>                stacktrace = getattr(exc, &#x27;stacktrace&#x27;, None)<br/>            time.sleep(self._poll)<br/>            if time.time() &gt; end_time:<br/>                break<br/>&gt;       raise TimeoutException(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.TimeoutException: Message:</span><br/><br/>venv\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException<br/> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m TestCases.test_invest:test_invest.py:179 ******投资用例：正常场景-投资成功 ******
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:21:22.662307，等待结束时间：2020-06-06 00:21:22.706188等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_投资操作:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:21:22.734114，等待结束时间：2020-06-06 00:21:22.758051等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 投资页面_投资操作 元素输入：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 投资页面_投资操作 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[text()=&quot;投标成功！&quot;]//following-sibling::div[@class=&quot;capital_btn&quot;]//button[text()=&quot;查看并激活&quot;]&#x27;)可见
-[31m[1mERROR   [0m Common.basepage:basepage.py:41 等待元素可见失败！！！
-Traceback (most recent call last):
-  File &quot;D:\ZPython\python_hm\web_frame_v1\Common\basepage.py&quot;, line 33, in wait_eleVisible
-    EC.visibility_of_element_located(locator))
-  File &quot;d:\zpython\python_hm\web_frame_v1\venv\lib\site-packages\selenium\webdriver\support\wait.py&quot;, line 80, in until
-    raise TimeoutException(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: 
-
-[32mINFO    [0m Common.basepage:basepage.py:141 截取网页成功，图片路径为D:\ZPython\python_hm\web_frame_v1\Outputs\screenshots/投资页面_投资成功的提示框_2020-06-06-00-21-53.png<br/> -----------------------------Captured log teardown------------------------------ <br/>[32mINFO    [0m TestCases.conftest:conftest.py:49 ======每一个用例后置：刷新当前页面======
-[32mINFO    [0m TestCases.conftest:conftest.py:68 ======用例类后置：关闭浏览器会话，清理环境======<br/> -------------------------------Captured log setup------------------------------- <br/>[32mINFO    [0m TestCases.conftest:conftest.py:58 ======用例类前置：初始化浏览器会话，登录XXX系统======
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 登录页面_登录功能:元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)已可见，等待起始时间：2020-06-06 00:22:38.932442，等待结束时间：2020-06-06 00:22:39.098998等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 登录页面_登录功能 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)<br/> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m TestCases.test_invest:test_invest.py:179 ******投资用例：正常场景-投资成功 ******
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:23:26.974974，等待结束时间：2020-06-06 00:23:27.023845等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_投资操作:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:23:27.051768，等待结束时间：2020-06-06 00:23:27.077701等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 投资页面_投资操作 元素输入：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 投资页面_投资操作 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[text()=&quot;投标成功！&quot;]//following-sibling::div[@class=&quot;capital_btn&quot;]//button[text()=&quot;查看并激活&quot;]&#x27;)可见
-[31m[1mERROR   [0m Common.basepage:basepage.py:41 等待元素可见失败！！！
-Traceback (most recent call last):
-  File &quot;D:\ZPython\python_hm\web_frame_v1\Common\basepage.py&quot;, line 33, in wait_eleVisible
-    EC.visibility_of_element_located(locator))
-  File &quot;d:\zpython\python_hm\web_frame_v1\venv\lib\site-packages\selenium\webdriver\support\wait.py&quot;, line 80, in until
-    raise TimeoutException(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: 
-
-[32mINFO    [0m Common.basepage:basepage.py:141 截取网页成功，图片路径为D:\ZPython\python_hm\web_frame_v1\Outputs\screenshots/投资页面_投资成功的提示框_2020-06-06-00-23-57.png<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">TestCases/test_invest.py::TestInvest::test_invest_0_failed_nol00[data0]</td>
-          <td class="col-duration">26.31</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>[32mINFO    [0m TestCases.conftest:conftest.py:58 ======用例类前置：初始化浏览器会话，登录XXX系统======
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 登录页面_登录功能:元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)已可见，等待起始时间：2020-06-06 00:16:31.474959，等待结束时间：2020-06-06 00:16:32.309727等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 登录页面_登录功能 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)<br/> -------------------------------Captured log setup------------------------------- <br/>[32mINFO    [0m TestCases.conftest:conftest.py:58 ======用例类前置：初始化浏览器会话，登录XXX系统======
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 登录页面_登录功能:元素(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)已可见，等待起始时间：2020-06-06 00:17:14.792126，等待结束时间：2020-06-06 00:17:14.915796等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;phone&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 登录页面_登录功能 元素输入：(&#x27;xpath&#x27;, &#x27;//input[@name=&quot;password&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 登录页面_登录功能 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text()=&quot;登录&quot;]&#x27;)<br/> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m TestCases.test_invest:test_invest.py:138 ******投资用例：异常场景-投标金额不是 100的整数倍、错误格式 ******
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:18:02.730935，等待结束时间：2020-06-06 00:18:02.811719等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_投资操作:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:18:02.841639，等待结束时间：2020-06-06 00:18:02.866606等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 投资页面_投资操作 元素输入：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 投资页面_投资操作 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;text-center&quot;]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_错误提示框-页面中间:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;text-center&quot;]&#x27;)已可见，等待起始时间：2020-06-06 00:18:03.343299，等待结束时间：2020-06-06 00:18:03.970619等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;text-center&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:96 投资页面_错误提示框-页面中间 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;text-center&quot;]&#x27;)的文本内容
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//a[@class=&quot;layui-layer-btn0&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 投资页面_错误提示框-页面中间 点击元素：(&#x27;xpath&#x27;, &#x27;//a[@class=&quot;layui-layer-btn0&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:18:04.463304，等待结束时间：2020-06-06 00:18:28.999690等待时长为：24
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">TestCases/test_invest.py::TestInvest::test_invest_0_failed_nol00[data1]</td>
-          <td class="col-duration">25.29</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m TestCases.test_invest:test_invest.py:138 ******投资用例：异常场景-投标金额不是 100的整数倍、错误格式 ******
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:18:53.666728，等待结束时间：2020-06-06 00:18:53.706623等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_投资操作:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:18:53.736542，等待结束时间：2020-06-06 00:18:53.765465等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 投资页面_投资操作 元素输入：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 投资页面_投资操作 点击元素：(&#x27;xpath&#x27;, &#x27;//button[text() = &quot;投标&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;text-center&quot;]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_错误提示框-页面中间:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;text-center&quot;]&#x27;)已可见，等待起始时间：2020-06-06 00:18:54.090596，等待结束时间：2020-06-06 00:18:54.652094等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;text-center&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:96 投资页面_错误提示框-页面中间 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;text-center&quot;]&#x27;)的文本内容
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//a[@class=&quot;layui-layer-btn0&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:67 投资页面_错误提示框-页面中间 点击元素：(&#x27;xpath&#x27;, &#x27;//a[@class=&quot;layui-layer-btn0&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:19:18.886300，等待结束时间：2020-06-06 00:19:18.927218等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">TestCases/test_invest.py::TestInvest::test_invest_1_failed_noButton[data0]</td>
-          <td class="col-duration">24.62</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m TestCases.test_invest:test_invest.py:160 ******投资用例：异常场景-投标金额不是10的整数倍-按钮可不点击 ******
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:19:43.620187，等待结束时间：2020-06-06 00:19:43.659077等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_投资操作:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:19:43.683980，等待结束时间：2020-06-06 00:19:43.708914等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 投资页面_投资操作 元素输入：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//button[@class=&quot;btn btn-special height_style&quot;]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取提示信息投标按钮上的:元素(&#x27;xpath&#x27;, &#x27;//button[@class=&quot;btn btn-special height_style&quot;]&#x27;)已可见，等待起始时间：2020-06-06 00:19:43.811638，等待结束时间：2020-06-06 00:19:43.890435等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[@class=&quot;btn btn-special height_style&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:96 投资页面_获取提示信息投标按钮上的 获取元素：(&#x27;xpath&#x27;, &#x27;//button[@class=&quot;btn btn-special height_style&quot;]&#x27;)的文本内容
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:20:08.167509，等待结束时间：2020-06-06 00:20:08.207402等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">TestCases/test_invest.py::TestInvest::test_invest_1_failed_noButton[data1]</td>
-          <td class="col-duration">24.61</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m TestCases.test_invest:test_invest.py:160 ******投资用例：异常场景-投标金额不是10的整数倍-按钮可不点击 ******
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:20:33.060944，等待结束时间：2020-06-06 00:20:33.116793等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_投资操作:元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:20:33.141763，等待结束时间：2020-06-06 00:20:33.166698等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:81 投资页面_投资操作 元素输入：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//button[@class=&quot;btn btn-special height_style&quot;]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取提示信息投标按钮上的:元素(&#x27;xpath&#x27;, &#x27;//button[@class=&quot;btn btn-special height_style&quot;]&#x27;)已可见，等待起始时间：2020-06-06 00:20:33.306289，等待结束时间：2020-06-06 00:20:33.357152等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//button[@class=&quot;btn btn-special height_style&quot;]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:96 投资页面_获取提示信息投标按钮上的 获取元素：(&#x27;xpath&#x27;, &#x27;//button[@class=&quot;btn btn-special height_style&quot;]&#x27;)的文本内容
-[32mINFO    [0m Common.basepage:basepage.py:28 等待元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)可见
-[32mINFO    [0m Common.basepage:basepage.py:38 投资页面_获取用户余额(输入框):元素(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)已可见，等待起始时间：2020-06-06 00:20:57.602321，等待结束时间：2020-06-06 00:20:57.643209等待时长为：0
-[32mINFO    [0m Common.basepage:basepage.py:53 查找元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)
-[32mINFO    [0m Common.basepage:basepage.py:110 投资页面_获取用户余额(输入框) 获取元素：(&#x27;xpath&#x27;, &#x27;//div[@class=&quot;clearfix left&quot;]/input[contains(@placeholder,&quot;可用余额&quot;)]&#x27;)的属性<br/></div></td></tr></tbody></table></body></html>
+            <div class="log">@pytest.mark.usefixtures(&quot;class_demo&quot;)<br/>    @pytest.mark.usefixtures(&quot;function_demo&quot;)<br/>    @pytest.mark.demo<br/>    def test_demo():<br/>        print(&quot;HHHHHHHHHHHHHHHHHHHHHH&quot;)<br/>&gt;       assert False<br/><span class="error">E       assert False</span><br/><br/>TestCases\test_login.py:16: AssertionError<br/></div></td></tr></tbody></table></body></html>

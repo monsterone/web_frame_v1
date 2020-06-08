@@ -35,3 +35,6 @@
 
 # 记录：6 月 4日 --- jenkins持续集成
 # 参考登录用例 （web自动化实战（7）下-12，视频）
+
+
+# pytest -m demo --reruns 2 --reruns-delay 5 -s --junitxml=Outputs/reports/report_invest.xml --html=Outputs/reports/html_report_invest.html --alluredir=Outputs/allure_reports

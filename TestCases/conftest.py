@@ -26,6 +26,12 @@ import time
 #pytest -m invest --reruns 2 --reruns-delay 5 -s --junitxml=Outputs/
 # reports/report_invest.xml --html=Outputs/reports/html_report_invest.html
 
+#allure-report
+#pytest -m invest --reruns 2 --reruns-delay 5 -s --junitxml=Outputs/
+# reports/report_invest.xml --html=Outputs/reports/html_report_invest.html
+## --alluredir=Outputs/allure_reports
+
+
 logger = Logger(__name__).getlog()
 driver = None
 #声明它是一个fixture
