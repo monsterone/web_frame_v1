@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="DESKTOP-7K6BCD4" name="pytest" skipped="0" tests="1" time="10.338" timestamp="2020-06-09T00:36:22.540229"><testcase classname="TestCases.test_login" file="TestCases\test_login.py" line="10" name="test_demo" time="0.032"><failure message="assert False">@pytest.mark.usefixtures(&quot;class_demo&quot;)
-    @pytest.mark.usefixtures(&quot;function_demo&quot;)
-    @pytest.mark.demo
-    def test_demo():
-        print(&quot;HHHHHHHHHHHHHHHHHHHHHH&quot;)
-&gt;       assert False
-E       assert False
-
-TestCases\test_login.py:16: AssertionError</failure></testcase></testsuite></testsuites>
