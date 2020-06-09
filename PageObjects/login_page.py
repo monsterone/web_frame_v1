@@ -1,5 +1,7 @@
 
-
+import os,sys
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
 from PageLocators.loginpage_locators import LoginPageLocator as loc
 #引入页面元素定位页面，页可以继承该类，但元素多了不好区分，长远考虑用loc快速找到定位元素
 from Common.basepage import BasePage

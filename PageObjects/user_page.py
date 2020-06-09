@@ -2,12 +2,12 @@
 # @Author : Monster
 # @File : user_page.py
 
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
+import os,sys
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
 from PageLocators.userpage_locators import UserPageLocator as UPL
 from Common.basepage import BasePage
-from selenium import webdriver
+
 
 class UserPage(BasePage):
 

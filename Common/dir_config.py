@@ -1,8 +1,9 @@
 
-import os,sys
+
 
 #框架项目顶层目录
 # BASE_DIR = os.path.split(os.path.split(os.path.abspath(__file__))[0])[0] #获取路径另一种方法
+import os,sys
 BASE_DIR=os.path.dirname(os.path.dirname(__file__))
 sys.path.append(BASE_DIR)
 

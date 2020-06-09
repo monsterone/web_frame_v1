@@ -7,6 +7,10 @@ from PageObjects.login_page import LoginPage
 from TestDatas import common_datas as CD
 from Common.logger import Logger
 import time
+
+import os,sys
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
 ##contftest 执行过程
 #1.conftest.py
 #2.定义fixture @pytest.fixture

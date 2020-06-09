@@ -1,5 +1,10 @@
+
+
+import os,sys
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
 import logging
-import os.path
+
 import time
 from Common.dir_config import log_dir
 

@@ -6,6 +6,9 @@ from PageObjects.index_page import IndexPage
 from TestDatas import common_datas as CD
 from TestDatas import login_datas as LD
 import ddt
+import os,sys
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
 import pytest
 
 @pytest.mark.usefixtures("class_demo")

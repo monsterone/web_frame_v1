@@ -1,9 +1,11 @@
 
 # 封装基本函数 - 执行日志、异常处理、失败截图
 #2、所以页面公共部分（不是基于业务）
+import os,sys
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 from Common.logger import Logger
 from Common import dir_config
 import datetime

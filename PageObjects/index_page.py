@@ -1,12 +1,17 @@
-import random
 
+
+import os,sys
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
+import random
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 
 from PageLocators.indexpage_locators import IndexPageLocator as IL
-# from selenium import webdriver
 from Common.basepage import BasePage
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
+
 class IndexPage(BasePage):
 
 

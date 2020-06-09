@@ -54,8 +54,10 @@ from TestDatas import invest_datas as IDs
 from Common.logger import Logger
 import ddt
 import time
+import os,sys
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
 logger = Logger(__name__).getlog()
-
 
 @pytest.mark.usefixtures("access_invest")
 @pytest.mark.usefixtures("refresh_page")

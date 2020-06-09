@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 # @Author : Monster
 # @File : bid_page.py
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 
+
+import os,sys
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
 from Common.basepage import BasePage
 from PageLocators.bidpage_locators import BidPageLocator as BL
 class BidPage(BasePage):
